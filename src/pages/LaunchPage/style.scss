@@ -1,0 +1,76 @@
+@import "../../global.scss";
+.launch_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100vh - 5rem - 99px);
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    @include mobile_potrait{
+        width: 90%;
+        margin-top: 120px;
+    }
+    h1{
+        color: #fff;
+        font-size: min(47px, 2.6vw) ;
+        margin-top: 40px;
+        margin-bottom: min(40px, 2vw) ;
+        span{
+            color: #CD547D;
+        }
+        @include mobile_potrait{
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+    h2{
+        color: #ffffff88;
+        font-size: min(22px, 1.5vw) ;
+        margin-bottom: min(40px, 3vw) ;
+        font-weight: normal;
+        @include mobile_potrait{
+            font-size: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    }
+    .launch_list{
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        grid-area: auto;
+        max-width: 1120px;
+        width: 90%;
+        background: rgba(22, 22, 22, 0.5);
+        border: 1px solid rgba(50, 46, 45, 0.8);
+        border-radius: 4px ;
+        overflow: hidden;
+        padding: 20px;
+        @include mobile_potrait{
+            padding: 10px;
+        }
+        .search{
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
+            width: 100%;
+            input{
+                background: rgba(38, 38, 38, 0.5);
+                border: 1px solid #262130;
+                box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
+                padding: 6px 10px;
+                font-size: 16px;
+                color: #ffffff88;
+                &:focus{
+                    outline: 1px #C8538088 solid;
+                }
+            }
+        }
+    }
+}
+
+

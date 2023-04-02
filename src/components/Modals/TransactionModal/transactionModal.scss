@@ -1,0 +1,153 @@
+@import "../../../global.scss";
+.transactionModal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.61);
+    z-index: 5;
+    display: none;
+    opacity: 1;
+    &.active{
+        display: flex;
+    }
+    .model_content{
+        z-index: 5;
+        width: 350px;
+        background: #161616;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: relative;
+        opacity: 1;
+        border-radius: 5px;
+        padding : 24px;
+        @include mobile_potrait{
+          width: 80vw;
+          padding : 20px;
+        }
+        .modal_top{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-bottom: 20px;
+            @include mobile_potrait{
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+            }
+            
+            .modal_title{
+                
+                color:#ffffff;
+                font-size: 1.2rem;
+                padding-left: 20px;
+            }
+            .closeBtn{
+              font-size: 24px;
+              border: none;
+              background-color: #00000000;
+              border-radius: 16px;
+              cursor: pointer;
+              color:#ffffff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s ease;
+              position: absolute;
+              left: 0;
+              &:hover{
+                transform: rotate(90deg);
+              }
+            }
+        }
+        
+        .modal_wrapper{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          z-index: 1;
+          p{
+            color: #fff;
+            font-size: 20px;
+            font-weight: normal;
+            text-align: left;
+            margin-bottom: 10px;
+            @include mobile_potrait{
+              font-size: 16px;
+            }
+          }
+          .row{
+            width: calc(100%);
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            grid-area: auto;
+            gap : 10px;
+            
+            h4{
+                color: #ffffff99;
+                font-size: 16px;
+                font-weight: normal;
+                @include mobile_potrait{
+                  font-size: 14px;
+                }
+            }
+            
+            .input_div{
+              display: flex;
+              align-items: center;
+              position: relative;
+              .label{
+                color: #ffffff99;
+                position: absolute;
+                right: 16px;
+                
+              }
+            }
+            .my_input{
+              border: none;
+              background: transparent;
+              color: #8D8D8D;
+              font-size: 16px;
+              width: 100%;
+              background-color: #232323;
+              padding: 16px;
+              padding-right: 32px;
+              border-radius: 10px;
+              &:focus{
+                  outline: 1px #CD547D solid;
+              }
+              @include mobile_potrait{
+                padding: 10px;
+              }
+            }
+            
+            input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+                display: none;
+            }
+
+          }
+          .w-130{
+            width: 100px;
+            padding-right: 16px;
+          }
+          .w-100{
+            width: 100%;
+            justify-content: space-between;
+          }
+          .mb-20{
+            margin-bottom: 20px;
+          }
+          .error{
+              box-shadow: 0px 0px 2px red;
+          }
+        }
+    }
+}

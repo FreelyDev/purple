@@ -1,0 +1,33 @@
+@import "../../global.scss";
+.ico_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100vh - 5rem - 99px);
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    @include mobile_potrait{
+        width: 90%;
+        margin-top: 120px;
+    }
+    h1{
+        color: #fff;
+        font-size: min(47px, 2.6vw) ;
+        margin-top: 40px;
+        margin-bottom: min(40px, 2vw) ;
+        span{
+            color: #CD547D;
+        }
+    }
+    h2{
+        color: #ffffff88;
+        font-size: min(22px, 1.5vw) ;
+        margin-bottom: min(40px, 3vw) ;
+        font-weight: normal;
+    }
+
+}
+
+

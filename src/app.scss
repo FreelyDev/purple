@@ -1,0 +1,170 @@
+@import "global.scss";
+
+.sections{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background: #000;
+    z-index: 1;
+    overflow: hidden;
+    
+}
+
+.myToast{
+    left: calc(50% - 75px) !important;
+    // width: 300px !important;
+    background: #121212 !important;
+    border: 1px solid #C85380;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: row;
+    >div{
+        color: #fff;
+        width: fit-content !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row !important;
+        font-size: 14px;
+    }
+    
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #CD547D 0%, #934793 100%);
+    padding : 10px 20px;
+    @include mobile_potrait{
+    }
+    p{
+        font-size: 16px;
+        color: white;
+        @include mobile_potrait{
+        }
+        
+    }
+    
+}
+.button{
+    font-size: MIN(1rem, 1vw);
+    padding : 0.5rem 1rem;
+    background: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 0px 0px 10px #C85380;
+    @include mobile_potrait{
+        font-size: 0.8rem;
+    }
+    
+    &:disabled{
+        background-image: linear-gradient(to right, #a5a5a5, #686868) ;
+        &::before {
+            opacity: 0 !important;
+            z-index: -1 !important;
+        }
+        p{
+            color: #aaa;
+            text-shadow: none;
+        }
+    }
+    &:hover{
+        box-shadow: 0px 0px 20px #C85380;
+        &::before {
+            transform: scale(1.5);
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0%;
+        width: 100%;
+        height: 40%;
+        background: radial-gradient(#C85380, #C8538000 50%);
+        filter: blur(4px);
+        bottom : -20%;
+        transition: all 0.3s ease;
+    }
+    p{
+        z-index: 1;
+        color: #fff !important;
+        font-size: MIN(16px, 1vw);
+        font-weight: 600;
+        text-transform: uppercase;
+        width: auto !important;
+        margin: 0 !important;
+        @include mobile_potrait{
+            font-size: 0.8rem;
+        }
+        @include mobile_landscape{
+            font-size: 0.8rem;
+        }
+    }
+}
+.effect1{
+    position: fixed;
+    left: -10vw;
+    top: 0;
+    opacity: 1;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: radial-gradient(#C85380, #C8538000);
+    filter: blur(477.5px);
+    @include mobile_potrait{
+        left: 0;
+    }
+}
+.effect2{
+    position: absolute;
+    right: -10vw;
+    bottom: 0;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    opacity: 0.7;
+    background: radial-gradient(#C85380, #C8538000);
+    filter: blur(277.5px);
+    @include mobile_potrait{
+        right: 0;
+    }
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    
+    @media screen and (max-width: 648px) and (orientation: portrait) {
+      height: 3px;
+    }
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #C85380;
+    border-radius: 5px;
+    
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #24131a;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #f378a7;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  
+  }

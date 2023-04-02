@@ -1,0 +1,123 @@
+@import "../../../global.scss";
+.connectModal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.61);
+    z-index: 5;
+    display: none;
+    opacity: 1;
+    &.active{
+        display: flex;
+    }
+    .model_content{
+        z-index: 5;
+        width: 20rem;
+        background: #161616;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: relative;
+        opacity: 1;
+        border-radius: 5px;
+        padding : 24px;
+        @include mobile_potrait{
+            width: 250px;
+        }
+        .modal_top{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-bottom: 20px;
+            @include mobile_potrait{
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+            }
+            @include mobile_landscape{
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+            }
+            .modal_title{
+                
+                color:#ffffff;
+                font-size: 1.2rem;
+                padding-left: 20px;
+            }
+            .closeBtn{
+                font-size: 24px;
+                border: none;
+                background-color: #00000000;
+                border-radius: 16px;
+                cursor: pointer;
+                color:#ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                position: absolute;
+                left: 0;
+                &:hover{
+                  transform: rotate(90deg);
+                }
+            }
+        }
+        
+        .mdal_wrapper{
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+            .connectModalBtn {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              cursor: pointer;
+              width: 100%;
+              background-color: #232323;
+              padding: 10px 20px;
+              border-radius: 5px;
+              margin-bottom: 10px;
+              position: relative;
+              transition: all 0.3s ease;
+              &:hover {
+                background-color: #333;
+              }
+              h2 {
+                font-size: 16px;
+                color: #fff;
+                transition: all 0.3s ease;
+                font-weight: normal;
+                @include mobile_potrait {
+                  font-size: 1.2rem;
+                }
+                @include mobile_landscape {
+                  font-size: 1.2rem;
+                }
+              }
+              .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                
+                img {
+                  width: 30px;
+                  height: 30px;
+                  @include mobile_potrait {
+                  }
+                }
+              }
+            }
+        }
+    }
+}

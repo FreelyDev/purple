@@ -1,0 +1,635 @@
+@import "../../../global.scss";
+.tokenStaking{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    @include mobile_potrait{
+        background-size: cover;
+        width: 100%;
+    }
+    @include mobile_landscape{
+        // height: auto !important;
+    }
+    .scroll{
+        position: absolute;
+        top :-5rem
+    }
+    .tokenStakingContent{
+        width: 90%;
+        z-index: 2;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        @include mobile_potrait{
+            height: auto;
+        }
+        @include mobile_landscape{
+            width: 90%;
+            margin-top: 3rem;
+            height: calc(100% - 3rem);
+        }
+        h1{
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            text-shadow: 2px 2px 0px #000,-2px -2px 0px #000,-2px 2px 0px #000,2px -2px 0px #000,3px 3px 10px #000,2px 2px 3px #000;
+            width: 100%;
+            text-align: center;           
+            line-height: 1; 
+            margin-bottom: 2rem;
+            @include mobile_potrait{
+                font-size: 1.5rem;
+                width: 90%;
+                margin-bottom: 1rem;
+                line-height: 1;
+
+                
+            }
+            @include mobile_landscape{
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+        p{
+            z-index: 1;
+            font-size: 1.2rem;
+            color: rgb(255, 255, 255);
+            width: 90%;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            @include mobile_potrait{
+                font-size: 0.8rem;
+                line-height: 1;
+            }
+            @include mobile_landscape{
+                font-size: 0.8rem;
+            }
+        }
+
+        .tokenStakingWrapper{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+            min-height: 60vh;
+            @include mobile_potrait{
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+            }
+            @include mobile_landscape{
+                width: 100%;
+                justify-content: center;
+            }
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            .stakingWrapper{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                border-radius: 4px;
+                width: calc(32% - 4rem);
+                max-width: 540px;
+                height: fit-content;
+                padding: 30px;
+                position: relative;
+                height: auto;
+                background: #161616;
+                border : 1px solid #CD547D;
+                @include mobile_potrait{
+                    margin-bottom: 1rem;
+                    width: calc(100% - 40px);
+                    padding: 20px;
+                }
+                
+                .header{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin-bottom: 1rem;
+                    position: relative;
+                    padding-bottom: 1rem;
+                    padding-top: 1rem;
+                    border: 1px #686868 solid;
+                    .logoImg{
+                        width: 4rem;
+                        margin-right: 1rem;
+                        filter: drop-shadow(3px 3px 5px #000);
+                        z-index: 1;
+                        @include mobile_potrait{
+                            width: 3rem;
+                            margin-right: 0.5rem;
+                        }
+                        @include mobile_landscape{
+                            width: 3rem;
+                        }
+                    }
+                    h2{
+                        z-index: 1;
+                        font-size: 1.5rem;
+                        color: rgb(255, 255, 255);
+                        width: auto;
+                        font-weight: 500;
+                        margin-bottom: 0rem;
+                        text-shadow: 3px 3px 5px #000;
+                        @include mobile_potrait{
+                            font-size: 1.2rem;
+                        }
+                        @include mobile_landscape{
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                }
+
+                .btns{
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                    width: calc(100%);
+                    flex-direction: column;
+                    position: relative;
+                    padding-top: 2vh;
+                    padding-bottom: 0.5vh;
+                    margin-bottom: 1rem;
+                    @include mobile_potrait{
+                        padding-top: 1rem;
+                        padding-bottom: 0.5rem;
+                    }
+                    @include mobile_landscape{
+                        font-size: 0.8rem;
+                    }
+                    span{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row;
+                    }
+                    p{
+                        z-index: 1;
+                        font-size: 1rem;
+                        color: rgb(255, 255, 255);
+                        width: auto;
+                        margin-bottom: 0rem;
+                        width: 50%;
+                        text-align: end;
+                        @include mobile_potrait{
+                            font-size: 0.8rem;
+                            margin-left: 0rem;
+                            margin-bottom: 0.5rem;
+                        }
+                        @include mobile_landscape{
+                            font-size: 0.8rem;
+                        }
+                    }
+                    .lft{
+                        text-align: left;
+                        text-shadow: 1px 1px 0px #000,-1px -1px 0px #000,-1px 1px 0px #000,1px -1px 0px #000;
+                    }
+                    button{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                        padding: 10px 20px;
+                        width: 100%;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        color: #fff;
+                        margin-top: 10px;
+                        &:hover{
+                            filter: brightness(1.3);
+                        }
+                        @include mobile_potrait{
+                        }
+                        &:disabled{
+                            background: linear-gradient(180deg, #3c3c3c 0%, #383838 100%);
+                            color: #aaa !important;
+                        }
+                    }
+                }
+                .contribute{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    
+                    @include mobile_potrait{
+                    }
+                    @include mobile_landscape{
+                        width: 90%;
+                    }
+                    h3{
+                        z-index: 1;
+                        font-size: 1.2rem;
+                        color: rgb(255, 255, 255);
+                        width: auto;
+                        margin-bottom: 1rem;
+                        font-weight: 500;
+                        @include mobile_potrait{
+                            font-size: 0.8rem;
+                        }
+                        @include mobile_landscape{
+                            font-size: 0.8rem;
+                        }
+                    }
+
+                    span{
+                        width: 100%;
+                        height: 54px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 0.5rem;
+                        border-radius: 10px;
+                        position: relative;
+                        padding-top: 1rem;
+                        padding-bottom: 0.5rem;
+                        background-size: 100% 100%;
+                        grid-area: auto;
+                        gap : 5px;
+                        @include mobile_potrait{
+                            height: 45px;
+                            margin-bottom: 0.5rem;
+                        }
+                        @include mobile_landscape{
+                            margin-bottom: 0.5rem;
+                            height: 45px;
+                        }
+                        p{
+                            z-index: 1;
+                            font-size: 1rem;
+                            color: rgb(255, 255, 255);
+                            text-transform: uppercase;
+                            width: auto;
+                            margin-bottom: 0rem;
+                            @include mobile_potrait{
+                                font-size: 0.8rem;
+                            }
+                            @include mobile_landscape{
+                                font-size: 0.8rem;
+                            }
+                        }
+                        input{
+                            width: 6rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 1rem;
+                            color: #fff;
+                            background-color: rgba(255, 255, 255, 0.103);
+                            border: none;
+                            text-align: left;
+                            z-index: 1;
+                            padding: 0.5rem;
+                            // box-shadow: 0px 0px 5px #ff3f04;
+                            // box-shadow: 0px 0px 5px #ff040400;
+                            &:focus{
+                                outline: 1px #CD547D solid;
+                            }
+                            @include mobile_potrait{
+                                font-size: 1rem;
+                                width: 3rem;
+                            }
+                            @include mobile_landscape{
+                                font-size: 1rem;
+                                width: 3rem;
+                            }
+    
+                        }
+                        input[type=number]::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                          }
+                          .alrt{
+                              position: absolute;
+                              bottom: 0rem;
+                              font-size: 0.8rem;
+                              left: 0.5rem;
+                              color: #ff3f04;
+                              @include mobile_potrait{
+                                font-size: 0.6rem;
+                            }
+                            @include mobile_landscape{
+                                font-size: 0.6rem;
+                            }
+                          }
+                        button{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: none;
+                            padding: 10px 20px;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                            color: #fff;
+                            &:hover{
+                                filter: brightness(1.3);
+                            }
+                            @include mobile_potrait{
+                                margin: 10px;
+                            }
+                            &:disabled{
+                                background: linear-gradient(180deg, #3c3c3c 0%, #383838 100%);
+                                color: #aaa !important;
+                            }
+                        }
+                    }
+                    p{
+                        z-index: 1;
+                        font-size: 1rem;
+                        color: rgb(255, 255, 255);
+                        width: 100%;
+                        text-align: left !important;
+                        margin-bottom: 0rem;
+                        @include mobile_potrait{
+                            font-size: 0.8rem;
+                            line-height: 1;
+                        }
+                        @include mobile_landscape{
+                            font-size: 0.81rem;
+                        }
+                    }
+    
+                }
+
+                .state{
+                    width: calc(100%);
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    position: relative;
+                    padding-top: 2vh;
+                    @include mobile_potrait{
+                        margin-bottom: 0.5rem;
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+
+                    }
+
+                    span{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        margin-bottom: 3px;
+                    }
+                    p{
+                        z-index: 1;
+                        margin-left: 0rem;
+                        font-size: 1rem;
+                        color: rgb(255, 255, 255);
+                        width: auto;
+                        margin-bottom: 0rem;
+                        @include mobile_potrait{
+                            font-size: 0.8rem;
+                            margin-bottom: 0.5rem;
+                        }
+                        @include mobile_landscape{
+                            font-size: 0.7rem;
+                        }
+                    }
+                    .lft{
+                        text-shadow: 1px 1px 0px #000,-1px -1px 0px #000,-1px 1px 0px #000,1px -1px 0px #000;
+                    }
+                    a{
+                        z-index: 1;
+                        margin-left: 0rem;
+                        font-size: 1.2rem;
+                        color: #aaa;
+                        letter-spacing: 2px;
+                        width: auto;
+                        margin-bottom: 0rem;
+                        text-decoration: none;
+                        margin-top: 1rem;
+                        transition: all 0.3s ease;
+                        &:hover{
+                            color: #fff;
+                        }
+                        @include mobile_potrait{
+                            font-size: 0.8rem;
+                        }
+                        @include mobile_landscape{
+                            font-size: 0.81rem;
+                        }
+                    }
+                }
+            }
+            .noData{
+                width: 100%;
+                height: 100%;
+                min-height: 60vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h2{
+                    font-size: 3rem;
+                    color: #fff;
+                    text-align: center;
+                    @include mobile_potrait{
+                        font-size: 1rem;
+                    }
+                    @include mobile_landscape{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .detail{
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            .detailBtn{
+                cursor: pointer;
+                color: #aaa;
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                transition: all 0.3s ease;
+                &:hover{
+                    color: #fff;
+                }
+                @include mobile_potrait{
+                    font-size: 1rem;
+                }
+                @include mobile_landscape{
+                    font-size: 1rem;
+                }
+                .fas{
+                    margin-left: 0.5rem;
+                }
+            }
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                p{
+                    z-index: 1;
+                    margin-right: 1rem;
+                    font-size: 1rem;
+                    color: rgb(255, 255, 255);
+                    text-shadow: 1px 1px 0px #000,-1px -1px 0px #000,-1px 1px 0px #000,1px -1px 0px #000;
+                    width: auto;
+                    @include mobile_potrait{
+                        font-size: 0.8rem;
+                    }
+                    @include mobile_landscape{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            
+        }
+        .icoBox {
+            // width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 1rem;
+            padding: 2rem;
+            position: relative;
+            background: #121212;
+            @include mobile_potrait{
+                width: 80%;
+            }
+            @include mobile_landscape{
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                width: 80%;
+            }
+            h2{
+                z-index: 1;
+                margin-right: 0.5rem;
+                font-size: 2rem;
+                color: rgb(255, 255, 255);
+                width: auto;
+                font-weight: 500;
+                margin-bottom: 1rem;
+                @include mobile_potrait{
+                    font-size: 1.2rem;
+                }
+                @include mobile_landscape{
+                    font-size: 1.2rem;
+                }
+            }
+            h3{
+                z-index: 1;
+                margin-right: 1rem;
+                font-size: 1.2rem;
+                color: rgb(255, 255, 255);
+                width: auto;
+                font-weight: 500;
+                @include mobile_potrait{
+                    font-size: 1rem;
+                }
+                @include mobile_landscape{
+                    font-size:1rem;
+                }
+            }
+            p{
+                z-index: 1;
+                margin-right: 1rem;
+                font-size: 1rem;
+                color: rgb(255, 255, 255);
+                width: auto;
+                @include mobile_potrait{
+                    font-size: 0.6rem;
+                }
+                @include mobile_landscape{
+                    font-size: 0.6rem;
+                }
+            }
+            ul{
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                list-style-type:decimal;
+                @include mobile_potrait{
+                    padding: 20px;
+                }
+                li{
+                    z-index: 1;
+                    font-size: 1rem;
+                    color: rgb(255, 255, 255);
+                    width: auto;
+                    @include mobile_potrait{
+                        font-size: 0.8rem;
+                    }
+                    @include mobile_landscape{
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+            a{
+                z-index: 1;
+                margin-left: 0rem;
+                font-size: 1.2rem;
+                color: #aaa;
+                // text-shadow:  2px 2px 0px rgb(52, 82, 252), -2px -2px 0px rgb(52, 82, 252), 2px -2px 0px rgb(52, 82, 252), -2px 2px 0px rgb(52, 82, 252),2px 2px 5px #000000;
+                letter-spacing: 2px;
+                width: auto;
+                margin-bottom: 0rem;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                &:hover{
+                    color: #fff;
+                }
+                @include mobile_potrait{
+                    font-size: 0.8rem;
+                    margin-left: 30%;
+                }
+                @include mobile_landscape{
+                    font-size: 0.8rem;
+                }
+                
+            }
+        }
+    }
+    .mintNft{
+        position: absolute;
+        z-index: 1;
+        width: 60%;
+        left: 0;
+        @include mobile_potrait{
+            width: 100%;
+            transform: scale(2.5);
+        }
+        @include mobile_landscape{
+        }
+    }
+}

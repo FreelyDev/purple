@@ -1,0 +1,114 @@
+@import "../../global.scss";
+.sidebar{
+    height: 110vh;
+    position: fixed;
+    width: 200px;
+    right:-200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 1s ease;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 15;
+    position: fixed;
+    top: 4rem;
+    @include mobile_potrait{
+        top: 6rem;
+        width: 150px;
+        right:-150px;
+    }
+    @include mobile_landscape{
+        top: 5rem;
+        width: 150px;
+        right:-150px;
+    }
+    &.active{
+        right: 0;
+    }
+    
+    ul{
+        margin-top: 1rem;
+        padding: 0;
+        list-style: none;
+        font-weight: 400;
+        color:black;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 0.8rem;
+        .menuItem1{
+            transition: right 1s ease;
+            transition-delay: 0.1s;
+        }
+        .menuItem2{
+            transition:  right 1s ease;
+            transition-delay: 0.15s;
+        }
+        .menuItem3{
+            transition:  right 1s ease;
+            transition-delay: 0.2s;
+        }
+        .menuItem4{
+            transition:  right 1s ease;
+            transition-delay: 0.25s;
+        }
+        .menuItem5{
+            transition:  right 1s ease;
+            transition-delay: 0.3s;
+        }
+        .menuItem6{
+            transition:  right 1s ease;
+            transition-delay: 0.35s;
+        }
+        .menuItem7{
+            transition:  right 1s ease;
+            transition-delay: 0.4s;
+        }
+        .menuItem8{
+            transition:  right 1s ease;
+            transition-delay: 0.45s;
+        }
+        .menuItem9{
+            transition:  right 1s ease;
+            transition-delay: 0.5s;
+        }
+        li{
+            position: relative;
+            transition: right 0s ease;
+            right:-200px;
+            margin-bottom: 1rem;
+
+            
+            a{
+                font-family: 'Roboto', sans-serif;
+                text-decoration: none;
+                font-size: 1rem;
+                color: rgba(255, 255, 255, 0.6);
+                text-shadow: 1px 1px 3px black;
+                text-transform: uppercase;
+                @include mobile_potrait{
+                    font-size: 0.8rem;
+                }
+                @include mobile_landscape{
+                    font-size: 0.8rem;
+                }
+            }
+            &:hover{
+                font-weight: 700;
+            }
+            
+            &.active{
+                right:0;
+            }
+        }
+        .selected{
+            a{
+                color: #ffffff;
+            }
+        }
+    }
+} 
